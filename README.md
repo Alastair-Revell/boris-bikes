@@ -14,6 +14,9 @@ Give the structure of the user story and extract a domain model from the story.
 | DockingStation  | release_bike  |
 | Bike  | working?  |
 
+`Bike <-- working? --> true/false
+DockingStation <-- release_bike --> a Bike`
+
 ## Challenge 3 
 
 Feature Test: A test to check **Messages** and **Objects** interact correctly. 
@@ -39,7 +42,7 @@ Use `Describe` to enter a module or Class name.
 
 ## Challenge 7 
 
-
+Added a 
 
 
 
