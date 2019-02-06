@@ -63,5 +63,16 @@ I added a test to your `DockingStation` specification that a) gets a bike, and t
 
 ## Challenge 11
 
-Wrote a unit test for the `dock` method. 
-Wrote a feature test to check if the `DockingStation` object responds to `dock`
+- Wrote a unit test for the `dock` method.
+- Wrote a feature test to check if the `DockingStation` object responds to `dock` method.
+- Used `attr_reader` to replace my getter function.
+
+## Challenge 12
+
+- Wrote a feature test that raises an error using `raise_error`.
+  - A bike cannot be released if the dock is empty.
+- Used `raise` to raise an `ArgumentError` in the code. This ensured the RSpec tests passed.
+
+## Challenge 13
+
+Repeated the steps in Challenge 12 to create a feature test that runs an error if you try to dock a bike in a full docking station. 
