@@ -48,6 +48,20 @@ This allows me to call the `release_bike` method.
 
 ## Challenge 8
 
-I added an RSpec test to ensure that the `Docking Station` object responds to the `relese_bike` method.
+I added an RSpec test to ensure that the `DockingStation` object responds to the `relese_bike` method.
 
 ## Challenge 9
+
+I asked the `Docking Station` to release a `bike`. Ask if the `bike` is `working?`.
+- This returns an error because `working?` has not been     defined yet.
+I also created a new Spec file for the `Bike` class and `describe` the `Bike` class in this file.
+
+## Challenge 10
+
+I added a test to your `DockingStation` specification that a) gets a bike, and then b) expects the bike to be working
+- I then got this test to pass
+
+## Challenge 11
+
+Wrote a unit test for the `dock` method. 
+Wrote a feature test to check if the `DockingStation` object responds to `dock`
