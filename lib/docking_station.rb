@@ -3,14 +3,24 @@ class DockingStation
 
   attr_reader :bike
 
-  def release_bike
-   fail 'No bikes available' unless @bike
-   @bike
+  def initialize
+    @bike = []
   end
 
-  def dock(bike)
-    fail 'Docking station full' if @bike
-    @bike = bike
+  def release_bike
+    if @bike.empty? == true
+      raise ArgumentError, "Dock is empty"
+    else
+      @bike
+    end
+  end
+
+  def dock(bike=Bike.new)
+    if @bike.size >= 20
+      raise ArgumentError, "Dock is full"
+    else
+      @bike << bike
+    end
   end
 
 end

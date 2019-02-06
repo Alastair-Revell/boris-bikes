@@ -12,11 +12,12 @@ describe DockingStation do
 
   it "raises error" do
     dock = DockingStation.new
-    expect {dock.release_bike}.to raise_error
+    expect {dock.release_bike}.to raise_error(ArgumentError, "Dock is empty")
   end
 
   it "raises error" do
-    dock = DockingStation.new
-    expect {dock.dock}.to raise_error
+    station = DockingStation.new
+    20.times {station.dock}
+    expect {station.dock}.to raise_error(ArgumentError, "Dock is full")
   end
 end
