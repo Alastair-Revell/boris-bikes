@@ -10,14 +10,13 @@ describe DockingStation do
 
   it { is_expected.to respond_to(:bike) }
 
-  context "dock is empty" do
-     before(:example) do
-       @bikes = []
-   end
+  it "raises error" do
+    dock = DockingStation.new
+    expect {dock.release_bike}.to raise_error
+  end
 
-   it "raises error" do
-     dock = DockingStation.new
-     expect {dock.release_bike}.to raise_error(ArgumentError,"No bikes available")
-   end
- end
+  it "raises error" do
+    dock = DockingStation.new
+    expect {dock.dock}.to raise_error
+  end
 end
