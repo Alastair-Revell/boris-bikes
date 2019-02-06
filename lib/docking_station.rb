@@ -1,19 +1,25 @@
 
 class DockingStation
 
-  def release_bike
-    Bike.new
+  attr_reader :bike
+
+  def initialize
+    @bike = []
   end
 
-  def dock(bike)
-    @bike =  bike
-  end
-
-  def bike
+  def release_bike(bike = Bike.new())
+    if @bike.empty? == true
+      raise ArgumentError, "No bikes available"
+    else
     @bike
+  end 
   end
 
+  def dock(bike = Bike.new())
+    @bike << bike
+  end
 end
+
 
 class Bike
 
@@ -21,10 +27,3 @@ class Bike
   end
 
 end
-
-
-station = DockingStation.new
-
-bike = station.release_bike
-
-station.dock(bike)
